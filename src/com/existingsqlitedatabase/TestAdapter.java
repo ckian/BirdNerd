@@ -61,11 +61,19 @@ public class TestAdapter
 	public Cursor getRows(String table) {
 
 		try {
-			String sql = "SELECT " + table + "_name, _id FROM " + table;
+			String c = table + "_name";
+			
+			String sql = "SELECT " + c + ", _id FROM " + table + " ORDER BY " + c;
+			Cursor mCur = mDb.rawQuery(sql,null);
+			
+//			String id = "_id";
+//			String[] columns = new String[]{id, c};
+//			String sql = sql1 + " order by " + c;
+//			Cursor mCur = mDb.query(table, columns, null, null, null, null, null);
 
-			Cursor mCur = mDb.rawQuery(sql, null);
 			if (mCur != null) {
-				mCur.moveToNext();
+//				mCur.moveToFirst();	//For query
+				mCur.moveToNext();  //For rawQuery
 			}
 			return mCur;
 		} catch (SQLException mSQLException) {
@@ -74,25 +82,25 @@ public class TestAdapter
 		}
 	}
     
-     public Cursor getTestData() 
-     { 
-         try 
-         { 
-             String sql ="SELECT bird_name FROM bird"; 
- 
-             Cursor mCur = mDb.rawQuery(sql, null); 
-             if (mCur!=null) 
-             { 
-                mCur.moveToNext(); 
-             } 
-             return mCur; 
-         } 
-         catch (SQLException mSQLException)  
-         { 
-             Log.e(TAG, "getTestData >>"+ mSQLException.toString()); 
-             throw mSQLException; 
-         } 
-     }
+//     public Cursor getTestData() 
+//     { 
+//         try 
+//         { 
+//             String sql ="SELECT bird_name FROM bird"; 
+// 
+//             Cursor mCur = mDb.rawQuery(sql, null); 
+//             if (mCur!=null) 
+//             { 
+//                mCur.moveToNext(); 
+//             } 
+//             return mCur; 
+//         } 
+//         catch (SQLException mSQLException)  
+//         { 
+//             Log.e(TAG, "getTestData >>"+ mSQLException.toString()); 
+//             throw mSQLException; 
+//         } 
+//     }
      
      
 

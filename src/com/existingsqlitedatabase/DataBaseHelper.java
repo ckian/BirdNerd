@@ -22,7 +22,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private final Context mContext;
 
 	public DataBaseHelper(Context context) {
-		super(context, DB_NAME, null, 1);// 1? its Database Version
+		super(context, DB_NAME, null, 3);// 1? its Database Version
 		DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
 		this.mContext = context;
 	}

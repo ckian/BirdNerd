@@ -3,68 +3,90 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:padding="@dimen/padding_medium"
-        android:text="@string/hello_world"
-        tools:context=".MainActivity" />
-
-    <EditText
-        android:id="@+id/txtName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_marginTop="16dp"
-        android:hint="Name"
-        android:ems="10" />
-
-    <EditText
-        android:id="@+id/txtEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/txtName"
-        android:layout_below="@+id/txtName"
-        android:hint="Email"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
     <Button
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/txtEmail"
-        android:layout_below="@+id/txtEmail"
-        android:text="Save" 
-        android:onClick="SaveEmployee"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="SearchBirds"
+        android:text="Search" />
 
-    <Button
-        android:id="@+id/btnSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView1"
+    <Spinner
+        android:id="@+id/spinner_location"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/textView1"
-        android:text="Load First Employee"
-        android:onClick="LoadEmployee" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="58dp"
+        android:prompt="@string/search_location_prompt"
+        android:text="Select Location Type" />
 
-        <Spinner
-            android:id="@+id/spinner_wing"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView1"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:prompt="@string/search_wings_prompt"
-            android:text="Select Wing Type"
-           />
-    
+    <Spinner
+        android:id="@+id/spinner_color"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:prompt="@string/search_color_prompt"
+        android:text="Select Color Type" />
+
+    <Spinner
+        android:id="@+id/spinner_shape"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner_location"
+        android:layout_marginTop="15dp"
+        android:prompt="@string/search_shape_prompt"
+        android:text="Select Shape Type" />
+
+    <Spinner
+        android:id="@+id/spinner_size"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner_shape"
+        android:layout_marginTop="15dp"
+        android:prompt="@string/search_size_prompt"
+        android:text="Select Size Type" />
+
+    <Spinner
+        android:id="@+id/spinner_bill"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner_size"
+        android:prompt="@string/search_bill_prompt"
+        android:text="Select Bill Type" />
+
+    <Spinner
+        android:id="@+id/spinner_wing"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:prompt="@string/search_wing_prompt"
+        android:text="Select Wing Type" />
+
+    <Spinner
+        android:id="@+id/spinner_iris"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btnSave"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="18dp"
+        android:prompt="@string/search_iris_prompt"
+        android:text="Select Iris Type" />
+
+    <Spinner
+        android:id="@+id/spinner_tail"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinner_bill"
+        android:prompt="@string/search_tail_prompt"
+        android:text="Select Tail Type" />
+
 </RelativeLayout>
