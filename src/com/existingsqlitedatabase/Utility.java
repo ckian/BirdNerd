@@ -3,8 +3,6 @@ package com.existingsqlitedatabase;
 import android.content.Context;
 import android.database.Cursor;
 import android.view.Gravity;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class Utility {

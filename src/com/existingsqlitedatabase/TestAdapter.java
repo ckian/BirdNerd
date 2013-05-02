@@ -2,7 +2,6 @@ package com.existingsqlitedatabase;
 
 import java.io.IOException; 
 
-import android.content.ContentValues;
 import android.content.Context; 
 import android.database.Cursor; 
 import android.database.SQLException; 
@@ -82,6 +81,12 @@ public class TestAdapter
 		}
 	}
     
+	public Cursor getQueryList(String query){
+		
+		Cursor mCur = mDb.rawQuery(query,null);
+		return mCur;
+		
+	}
 //     public Cursor getTestData() 
 //     { 
 //         try 
