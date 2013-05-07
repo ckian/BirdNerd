@@ -1,3 +1,7 @@
+![Alt text](/res/drawable-hdpi/logo.png "Optional title")
+
+
+
 BirdNerd
 ========
 BirdNerd is an Android app which is used to help users identify and learn more about various birds.  
