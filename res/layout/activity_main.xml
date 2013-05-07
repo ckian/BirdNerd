@@ -3,6 +3,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+    <Spinner
+        android:id="@+id/spinner_location"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:prompt="@string/search_location_prompt"
+        android:text="Select Location Type" />
+
+    <Spinner
+        android:id="@+id/spinner_color"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner_location"
+        android:prompt="@string/search_color_prompt"
+        android:text="Select Color Type" />
+
+    <Spinner
+        android:id="@+id/spinner_size"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner_color"
+        android:prompt="@string/search_size_prompt"
+        android:text="Select Size Type" />
+
+    <Spinner
+        android:id="@+id/spinner_shape"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner_size"
+        android:prompt="@string/search_shape_prompt"
+        android:text="Select Shape Type" />
+
+    <Spinner
+        android:id="@+id/spinner_wing"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner_shape"
+        android:prompt="@string/search_wing_prompt"
+        android:text="Select Wing Type" />
+
+    <Spinner
+        android:id="@+id/spinner_bill"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner_wing"
+        android:prompt="@string/search_bill_prompt"
+        android:text="Select Bill Type" />
+
+    <Spinner
+        android:id="@+id/spinner_tail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner_bill"
+        android:prompt="@string/search_tail_prompt"
+        android:text="Select Tail Type" />
+
+    <Spinner
+        android:id="@+id/spinner_iris"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner_tail"
+        android:prompt="@string/search_iris_prompt"
+        android:text="Select Iris Type" />
+
     <Button
         android:id="@+id/btn_query"
         android:layout_width="wrap_content"
@@ -10,82 +73,5 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="Search" />
-
-    <Spinner
-        android:id="@+id/spinner_location"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="58dp"
-        android:prompt="@string/search_location_prompt"
-        android:text="Select Location Type" />
-
-    <Spinner
-        android:id="@+id/spinner_color"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
-        android:prompt="@string/search_color_prompt"
-        android:text="Select Color Type" />
-
-    <Spinner
-        android:id="@+id/spinner_shape"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/spinner_location"
-        android:layout_marginTop="15dp"
-        android:prompt="@string/search_shape_prompt"
-        android:text="Select Shape Type" />
-
-    <Spinner
-        android:id="@+id/spinner_size"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/spinner_shape"
-        android:layout_marginTop="15dp"
-        android:prompt="@string/search_size_prompt"
-        android:text="Select Size Type" />
-
-    <Spinner
-        android:id="@+id/spinner_bill"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/spinner_size"
-        android:prompt="@string/search_bill_prompt"
-        android:text="Select Bill Type" />
-
-    <Spinner
-        android:id="@+id/spinner_wing"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:prompt="@string/search_wing_prompt"
-        android:text="Select Wing Type" />
-
-    <Spinner
-        android:id="@+id/spinner_iris"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_above="@+id/btnSave"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="18dp"
-        android:prompt="@string/search_iris_prompt"
-        android:text="Select Iris Type" />
-
-    <Spinner
-        android:id="@+id/spinner_tail"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/spinner_bill"
-        android:prompt="@string/search_tail_prompt"
-        android:text="Select Tail Type" />
 
 </RelativeLayout>

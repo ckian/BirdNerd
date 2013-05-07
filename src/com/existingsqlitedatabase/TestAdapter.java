@@ -1,78 +1,69 @@
 package com.existingsqlitedatabase;
 
-import java.io.IOException; 
+import java.io.IOException;
 
-import android.content.Context; 
-import android.database.Cursor; 
-import android.database.SQLException; 
-import android.database.sqlite.SQLiteDatabase; 
-import android.util.Log; 
- 
-public class TestAdapter  
-{ 
-    protected static final String TAG = "DataAdapter"; 
- 
-    private final Context mContext; 
-    private SQLiteDatabase mDb; 
-    private DataBaseHelper mDbHelper; 
- 
-    public TestAdapter(Context context)  
-    { 
-        this.mContext = context; 
-        mDbHelper = new DataBaseHelper(mContext); 
-    } 
- 
-    public TestAdapter createDatabase() throws SQLException  
-    { 
-        try  
-        { 
-            mDbHelper.createDataBase(); 
-        }  
-        catch (IOException mIOException)  
-        { 
-            Log.e(TAG, mIOException.toString() + "  UnableToCreateDatabase"); 
-            throw new Error("UnableToCreateDatabase"); 
-        } 
-        return this; 
-    } 
- 
-    public TestAdapter open() throws SQLException  
-    { 
-        try  
-        { 
-            mDbHelper.openDataBase(); 
-            mDbHelper.close(); 
-            mDb = mDbHelper.getReadableDatabase(); 
-        }  
-        catch (SQLException mSQLException)  
-        { 
-            Log.e(TAG, "open >>"+ mSQLException.toString()); 
-            throw mSQLException; 
-        } 
-        return this; 
-    } 
- 
-    public void close()  
-    { 
-        mDbHelper.close(); 
-    } 
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+public class TestAdapter {
+	protected static final String TAG = "DataAdapter";
+
+	private final Context mContext;
+	private SQLiteDatabase mDb;
+	private DataBaseHelper mDbHelper;
+
+	public TestAdapter(Context context) {
+		this.mContext = context;
+		mDbHelper = new DataBaseHelper(mContext);
+	}
+
+	public TestAdapter createDatabase() throws SQLException {
+		try {
+			mDbHelper.createDataBase();
+		} catch (IOException mIOException) {
+			Log.e(TAG, mIOException.toString() + "  UnableToCreateDatabase");
+			throw new Error("UnableToCreateDatabase");
+		}
+		return this;
+	}
+
+	public TestAdapter open() throws SQLException {
+		try {
+			mDbHelper.openDataBase();
+			mDbHelper.close();
+			mDb = mDbHelper.getReadableDatabase();
+		} catch (SQLException mSQLException) {
+			Log.e(TAG, "open >>" + mSQLException.toString());
+			throw mSQLException;
+		}
+		return this;
+	}
+
+	public void close() {
+		mDbHelper.close();
+	}
 
 	public Cursor getRows(String table) {
 
 		try {
 			String c = table + "_name";
-			
-			String sql = "SELECT " + c + ", _id FROM " + table + " ORDER BY " + c;
-			Cursor mCur = mDb.rawQuery(sql,null);
-			
-//			String id = "_id";
-//			String[] columns = new String[]{id, c};
-//			String sql = sql1 + " order by " + c;
-//			Cursor mCur = mDb.query(table, columns, null, null, null, null, null);
+
+			String sql = "SELECT " + c + ", _id FROM " + table + " ORDER BY "
+					+ c;
+			Cursor mCur = mDb.rawQuery(sql, null);
+
+			// String id = "_id";
+			// String[] columns = new String[]{id, c};
+			// String sql = sql1 + " order by " + c;
+			// Cursor mCur = mDb.query(table, columns, null, null, null, null,
+			// null);
 
 			if (mCur != null) {
-//				mCur.moveToFirst();	//For query
-				mCur.moveToNext();  //For rawQuery
+				// mCur.moveToFirst(); //For query
+				mCur.moveToNext(); // For rawQuery
 			}
 			return mCur;
 		} catch (SQLException mSQLException) {
@@ -80,12 +71,38 @@ public class TestAdapter
 			throw mSQLException;
 		}
 	}
-    
-	public Cursor getQueryList(String query){
-		
-		Cursor mCur = mDb.rawQuery(query,null);
-		return mCur;
-		
+
+	public Cursor getQueryList(String query) {
+		try {
+
+			Cursor mCur = mDb.rawQuery(query, null);
+			if (mCur != null) {
+				mCur.moveToNext(); // For rawQuery
+			}
+			return mCur;
+		} catch (SQLException mSQLException) {
+			Log.e(TAG, "getTestData >>" + mSQLException.toString());
+			throw mSQLException;
+		}
+
+	}
+	
+	public Cursor getFullInfo(int position) {
+		try {
+
+			String query = "SELECT * FROM bird WHERE _id = "
+					+ Integer.toString(position);
+
+			Cursor mCur = mDb.rawQuery(query, null);
+			if (mCur != null) {
+				mCur.moveToNext(); // For rawQuery
+			}
+			return mCur;
+		} catch (SQLException mSQLException) {
+			Log.e(TAG, "getTestData >>" + mSQLException.toString());
+			throw mSQLException;
+		}
+
 	}
 //     public Cursor getTestData() 
 //     { 

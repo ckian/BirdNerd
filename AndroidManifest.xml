@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".QueryResult"></activity>
+        <activity android:name=".SingleListItem"></activity>
     </application>
 
 </manifest>
