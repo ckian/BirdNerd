@@ -1,4 +1,4 @@
-![Alt text](/res/drawable-hdpi/logo.png "Optional title")
+![A Silly Owl With Glasses on its face](/res/drawable-hdpi/logo.png "Hoo Dat?")
 
 
 
