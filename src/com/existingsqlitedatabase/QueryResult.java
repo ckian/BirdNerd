@@ -74,6 +74,8 @@ public class QueryResult extends ListActivity {
         	  
         	  String val = cursor.getString( cursor.getColumnIndex("_id") );
 
+        	  cursor.close();
+        	  
             Intent intent = new Intent(getBaseContext(), SingleListItem.class);
       		intent.putExtra("ID", val);
       		startActivity(intent);

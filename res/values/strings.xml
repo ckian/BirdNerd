@@ -15,5 +15,9 @@
     <string name="title_activity_splash">BirdNerd</string>
     <string name="title_activity_query">Search Results</string>
     <string name="title_activity_result">Detailed Information</string>
+    <string name="splash_greeting">BirdNerd is designed with bird lovers in mind.  This easy to use app is perfect for anyone with a passion in ornothology.  So whether you\'re a novice bird watcher, or an over the top BirdNerd, you\'ll find something to flap your wings about!</string>
+    <string name="splash_copyright">Copyright Christopher Kian 2013</string>
+    <string name="splash_csu">CSU Chico Capstone Project</string>
+    <string name="splash_disclamer">Images and Data By WhatBird.com</string>
 
 </resources>

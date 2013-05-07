@@ -66,15 +66,12 @@ public class SingleListItem extends ListActivity{
 		
 		
 		this.setListAdapter(mAdapter);
-		
-//		ListView lv=getListView();
-//		lv.setDivider(this.getResources().getDrawable(R.drawable.div_color));
-//		lv.setDividerHeight(9);
-		
+
         reset = (Button) findViewById(R.id.new_search_button);
 
       reset.setOnClickListener(new View.OnClickListener() {
           public void onClick(View v) {
+        	  Utility.ShowMessageBox(getApplicationContext(), "reset!");
         	  startNewSearch();
           }
       });
@@ -86,6 +83,7 @@ public class SingleListItem extends ListActivity{
 		Intent intent = new Intent(getBaseContext(), MainActivity.class);
 		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(intent);
+		this.finish();
 	}
 
 }

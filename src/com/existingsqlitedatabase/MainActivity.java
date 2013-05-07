@@ -168,6 +168,7 @@ public class MainActivity extends Activity {
     		
     	}
 
+    	cursor.close();
 		return query;
     }
     

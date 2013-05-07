@@ -10,18 +10,57 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:paddingTop="20dp"
         android:src="@drawable/logo" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World, splash"
-        android:textColor="#FFFFFF" />
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:text="Welcome To BirdNerd!"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
 
-    <Button
-        android:id="@+id/start_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Begin Searching!" />
+     <TextView
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:paddingLeft="5dp"
+         android:paddingRight="5dp"
+         android:paddingTop="5dp"
+         android:text="@string/splash_greeting"
+         android:textColor="#FFFFFF" />
+     
+          <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:paddingTop="10dp"
+              android:text="@string/splash_copyright"
+              android:textColor="#FFFFFF"
+              android:textSize="10sp" />
+                    <TextView
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text="@string/splash_csu"
+              android:textColor="#FFFFFF"
+              android:textSize="10sp" />
+
+                              <TextView
+                                  android:layout_width="fill_parent"
+                                  android:layout_height="wrap_content"
+                                  android:gravity="center"
+                                  android:paddingBottom="10dp"
+                                  android:text="@string/splash_disclamer"
+                                  android:textColor="#FFFFFF"
+                                  android:textSize="10sp" />
+
+                              <Button
+                                  android:id="@+id/start_btn"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="Begin Searching!" />
 
 </LinearLayout>

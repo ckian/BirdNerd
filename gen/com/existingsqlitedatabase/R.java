@@ -1033,6 +1033,10 @@ public final class R {
         public static final int search_size_prompt=0x7f050005;
         public static final int search_tail_prompt=0x7f050006;
         public static final int search_wing_prompt=0x7f050007;
+        public static final int splash_copyright=0x7f050010;
+        public static final int splash_csu=0x7f050011;
+        public static final int splash_disclamer=0x7f050012;
+        public static final int splash_greeting=0x7f05000f;
         public static final int title_activity_main=0x7f05000b;
         public static final int title_activity_query=0x7f05000d;
         public static final int title_activity_result=0x7f05000e;
