@@ -956,6 +956,9 @@ public final class R {
         public static final int full_99=0x7f0203a9;
         public static final int ic_action_search=0x7f0203aa;
         public static final int ic_launcher=0x7f0203ab;
+        public static final int logo=0x7f0203ac;
+        public static final int splash_gradient=0x7f0203ad;
+        public static final int test_icon=0x7f0203ae;
     }
     public static final class id {
         public static final int bird_info=0x7f08000e;
@@ -979,7 +982,7 @@ public final class R {
         public static final int latin_name_title=0x7f08002b;
         public static final int length_range=0x7f080010;
         public static final int length_range_title=0x7f08000f;
-        public static final int menu_settings=0x7f08002e;
+        public static final int menu_settings=0x7f080030;
         public static final int migration=0x7f08002a;
         public static final int migration_title=0x7f080029;
         public static final int nest_location=0x7f080028;
@@ -999,6 +1002,8 @@ public final class R {
         public static final int spinner_size=0x7f080002;
         public static final int spinner_tail=0x7f080006;
         public static final int spinner_wing=0x7f080004;
+        public static final int splash_logo=0x7f08002e;
+        public static final int start_btn=0x7f08002f;
         public static final int vocalization=0x7f08001a;
         public static final int vocalization_title=0x7f080019;
         public static final int weight=0x7f080012;
@@ -1011,6 +1016,7 @@ public final class R {
         public static final int query_list_entry=0x7f030001;
         public static final int query_list_view=0x7f030002;
         public static final int result_view=0x7f030003;
+        public static final int splash=0x7f030004;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;
@@ -1028,6 +1034,9 @@ public final class R {
         public static final int search_tail_prompt=0x7f050006;
         public static final int search_wing_prompt=0x7f050007;
         public static final int title_activity_main=0x7f05000b;
+        public static final int title_activity_query=0x7f05000d;
+        public static final int title_activity_result=0x7f05000e;
+        public static final int title_activity_splash=0x7f05000c;
     }
     public static final class style {
         public static final int AppTheme=0x7f060000;

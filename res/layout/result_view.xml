@@ -1,331 +1,347 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
-    <ListView
-        android:id="@android:id/android:list"
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:divider="#222222"
-        android:dividerHeight="1px" />
+        android:layout_height="fill_parent" >
 
-    <ImageView
-        android:id="@+id/bird_picture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/bird_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/bird_name_title"
+        <TextView
+            android:id="@+id/bird_name_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bird_picture"
+            android:background="#00deff"
+            android:text="Name"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/bird_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bird_name_title"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/bird_info_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bird_name"
+            android:background="#00deff"
+            android:text="General Information"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/bird_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bird_info_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/length_range_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bird_info"
+            android:background="#00deff"
+            android:text="Length Range (In inches)"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/length_range"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/length_range_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/weight_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/length_range"
+            android:background="#00deff"
+            android:text="Weight (In lbs)"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weight_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/wingspan_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weight"
+            android:background="#00deff"
+            android:text="Wingspan (In inches)"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/wingspan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wingspan_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/nesting_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wingspan"
+            android:background="#00deff"
+            android:text="Nesting"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/nesting"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nesting_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/foraging_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nesting"
+            android:background="#00deff"
+            android:text="Foraging"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/foraging"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foraging_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/vocalization_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foraging"
+            android:background="#00deff"
+            android:text="Vocalization"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/vocalization"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vocalization_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/similar_species_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vocalization"
+            android:background="#00deff"
+            android:text="Similar Species"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/similar_species"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/similar_species_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/breeding_location_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/similar_species"
+            android:background="#00deff"
+            android:text="Breeding Location"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/breeding_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/breeding_location_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/breeding_type_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/breeding_location"
+            android:background="#00deff"
+            android:text="Breeding Type"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/breeding_type"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/breeding_type_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/conservation_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/breeding_type"
+            android:background="#00deff"
+            android:text="Conservation Status"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/conservation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/conservation_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/egg_color_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/conservation"
+            android:background="#00deff"
+            android:text="Egg Description"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/egg_color"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/egg_color_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/nest_material_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/egg_color"
+            android:background="#00deff"
+            android:text="Nest Material"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/nest_material"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nest_material_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/nest_location_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nest_material"
+            android:background="#00deff"
+            android:text="Nest Location"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/nest_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nest_location_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/migration_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nest_location"
+            android:background="#00deff"
+            android:text="Migration"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/migration"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/migration_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/latin_name_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/migration"
+            android:background="#00deff"
+            android:text="Latin Name"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/latin_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/latin_name_title"
+            android:textSize="18dp" >
+        </TextView>
+
+        <Button
+            android:id="@+id/new_search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/latin_name"
+            android:layout_centerHorizontal="true"
+            android:text="Start New Search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bird_picture"
-        android:background="#000000"
-        android:text="Name"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
+        android:layout_height="fill_parent" >
 
-    <TextView
-        android:id="@+id/bird_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bird_name_title"
-        android:textSize="22dp" />
+        <ListView
+            android:id="@android:id/android:list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:divider="#222222"
+            android:dividerHeight="1px"
+            android:paddingBottom="15dp" />
 
-    <TextView
-        android:id="@+id/bird_info_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bird_name"
-        android:background="#000000"
-        android:text="General Information"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/bird_info"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bird_info_title"
-        android:textSize="22dp" >
-    </TextView>
 
-    <TextView
-        android:id="@+id/length_range_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bird_info"
-        android:background="#000000"
-        android:text="Length Range"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/length_range"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/length_range_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/weight_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/length_range"
-        android:background="#000000"
-        android:text="Weight"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/weight"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/weight_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/wingspan_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/weight"
-        android:background="#000000"
-        android:text="Wingspan"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/wingspan"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/wingspan_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/nesting_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/wingspan"
-        android:background="#000000"
-        android:text="Nesting"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/nesting"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nesting_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/foraging_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nesting"
-        android:background="#000000"
-        android:text="Foraging"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/foraging"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/foraging_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/vocalization_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/foraging"
-        android:background="#000000"
-        android:text="Vocalization"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/vocalization"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/vocalization_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/similar_species_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/vocalization"
-        android:background="#000000"
-        android:text="Similar Species"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/similar_species"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/similar_species_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/breeding_location_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/similar_species"
-        android:background="#000000"
-        android:text="Breeding Location"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/breeding_location"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/breeding_location_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/breeding_type_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/breeding_location"
-        android:background="#000000"
-        android:text="Breeding Type"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/breeding_type"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/breeding_type_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/conservation_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/breeding_type"
-        android:background="#000000"
-        android:text="Conservation Status"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/conservation"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/conservation_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/egg_color_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/conservation"
-        android:background="#000000"
-        android:text="Egg Description"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/egg_color"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/egg_color_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/nest_material_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/egg_color"
-        android:background="#000000"
-        android:text="Nest Material"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/nest_material"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nest_material_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/nest_location_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nest_material"
-        android:background="#000000"
-        android:text="Nest Location"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/nest_location"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nest_location_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/migration_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nest_location"
-        android:background="#000000"
-        android:text="Migration"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/migration"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/migration_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/latin_name_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/migration"
-        android:background="#000000"
-        android:text="Latin Name"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/latin_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/latin_name_title"
-        android:textSize="22dp" >
-    </TextView>
-
-    <Button
-        android:id="@+id/new_search_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/latin_name"
-        android:layout_centerHorizontal="true"
-        android:text="Start New Search" />
-
-</RelativeLayout>
+</FrameLayout>

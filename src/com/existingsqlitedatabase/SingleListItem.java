@@ -1,5 +1,6 @@
 package com.existingsqlitedatabase;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -8,11 +9,13 @@ import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class SingleListItem extends ListActivity{
 
 	public SimpleCursorAdapter mAdapter;
 	private Button reset;
+	TextView tv;
 
 	@SuppressWarnings("deprecation")
 	@Override
@@ -37,7 +40,7 @@ public class SingleListItem extends ListActivity{
 				"breeding_type", "conservation", "egg_color", "nest_material",
 				"nest_location", "migration", "latin_name" };
 		// the XML defined views which the data will be bound to
-		int[] to = new int[] { R.id.bird_picture, R.id.bird_name,
+		int[] to = new int[] { R.id.bird_picture, R.id.bird_name, R.id.bird_info,
 				R.id.length_range, R.id.weight, R.id.wingspan, R.id.nesting, R.id.foraging,
 				R.id.vocalization, R.id.similar_species, R.id.breeding_location,
 				R.id.breeding_type, R.id.conservation, R.id.egg_color, R.id.nest_material,
@@ -55,12 +58,15 @@ public class SingleListItem extends ListActivity{
 //					Utility.ShowMessageBox(getApplicationContext(), "returned true");
 					return true;
 				}
+
 //				Utility.ShowMessageBox(getApplicationContext(), "returned false");
 				return false;
 			}
 		});
 		
+		
 		this.setListAdapter(mAdapter);
+		
 //		ListView lv=getListView();
 //		lv.setDivider(this.getResources().getDrawable(R.drawable.div_color));
 //		lv.setDividerHeight(9);
